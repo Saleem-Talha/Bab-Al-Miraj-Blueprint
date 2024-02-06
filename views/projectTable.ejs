@@ -1,0 +1,46 @@
+<%- include('layout/header2') %>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="viewtable">
+                    <thead class="thead">
+                        <tr class="trow">
+                            <th class="theading">Project ID</th>
+                            <th class="theading">Project Name</th>
+                            <th class="theading">Start Date</th>
+                            <th class="theading">Job Order Number</th>
+                            <th class="theading">End Date</th>
+                            <th class="theading">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% let index=1; %>
+                            <% for (const project of projects) { %>
+                                <tr>
+                                    <td>
+                                        <%= project.projectId %>
+                                    </td>
+                                    <td>
+                                        <%= project.projectName %>
+                                    </td>
+                                    <td>
+                                        <%= project.startDate %>
+                                    </td>
+                                    <td>
+                                        <%= project.jobOrderNumber %>
+                                    </td>
+                                    <td>
+                                        <%= project.endDate %>
+                                    </td>
+                                    <td>
+                                        <a href="/editProject/<%= project._id %>">edit</a>
+                                        <a href="/deleteProject/<%= project._id %>">remove</a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <%- include('layout/footer') %>

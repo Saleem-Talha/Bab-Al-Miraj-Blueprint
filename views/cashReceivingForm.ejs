@@ -1,0 +1,35 @@
+<%- include('layout/header') %>
+    <div class="container">
+        <section id="addCashReceivingForm">
+            <form action="/cashReceiving/add" method="post">
+                <div class="card">
+                    <label for="receivingId">Receiving ID</label>
+                    <input type="text" name="receivingId" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="date">Date</label>
+                    <input type="date" name="date" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="paidToEmployee">Paid To Employee</label>
+                    <input type="text" name="paidToEmployee" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="paidByEmployee">Paid By Employee</label>
+                    <input type="text" name="paidByEmployee" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="balanceAfterPayment">Balance After Payment</label>
+                    <input type="number" name="balanceAfterPayment" class="inp" required>
+                </div>
+                <div class="button2 card">
+                    <input type="submit" name="submit" class="inp" value="Add Cash Receiving">
+                </div>
+            </form>
+        </section>
+    </div>
+    <%- include('layout/footer') %>

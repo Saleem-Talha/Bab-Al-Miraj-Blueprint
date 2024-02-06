@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#head {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#head img{
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+}
+
+#navbar {
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.items {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.items a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.items a:hover {
+    color: #ff9900;
+}
+
+.viewtable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.viewtable th,
+.viewtable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.viewtable th {
+    background-color: #000;
+    color: white;
+}
+
+#AFS{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 110px;
+}
+
+#add_form{
+    height: 500px;
+    width: 70%;
+}
+
+#add_form .card{
+    margin: 2%;
+}
+#add_form {
+    width: 70%;
+    margin: auto;
+}
+
+#add_form .card {
+    margin: 2%;
+}
+
+#add_form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#add_form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#add_form .button2 {
+    margin-top: 20px;
+}
+#employee_form {
+    width: 70%;
+    margin: auto;
+}
+
+#employee_form .card {
+    margin: 2%;
+}
+
+#employee_form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#employee_form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#employee_form .button2 {
+    margin-top: 20px;
+}
+

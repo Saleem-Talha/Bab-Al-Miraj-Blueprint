@@ -1,0 +1,31 @@
+<%- include('layout/header') %>
+    <div class="container">
+        <section id="addProjectForm">
+            <form action="/projects/add" method="post">
+                <div class="card">
+                    <label for="projectId">Project ID</label>
+                    <input type="text" name="projectId" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" name="projectName" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" name="startDate" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="jobOrderNumber">Job Order Number</label>
+                    <input type="number" name="jobOrderNumber" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="endDate">End Date</label>
+                    <input type="date" name="endDate" class="inp" required>
+                </div>
+                <div class="button2 card">
+                    <input type="submit" name="submit" class="inp" value="Add Project">
+                </div>
+            </form>
+        </section>
+    </div>
+    <%- include('layout/footer') %>

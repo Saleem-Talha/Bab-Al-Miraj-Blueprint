@@ -1,0 +1,46 @@
+<%- include('layout/header2') %>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="viewtable">
+                    <thead class="thead">
+                        <tr class="trow">
+                            <th class="theading">Receiving ID</th>
+                            <th class="theading">Date</th>
+                            <th class="theading">Amount</th>
+                            <th class="theading">Paid To Employee</th>
+                            <th class="theading">Balance After Payment</th>
+                            <th class="theading">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% let index=1; %>
+                            <% for (const cashReceiving of cashReceivings) { %>
+                                <tr>
+                                    <td>
+                                        <%= cashReceiving.receivingId %>
+                                    </td>
+                                    <td>
+                                        <%= cashReceiving.date %>
+                                    </td>
+                                    <td>
+                                        <%= cashReceiving.amount %>
+                                    </td>
+                                    <td>
+                                        <%= cashReceiving.paidToEmployee %>
+                                    </td>
+                                    <td>
+                                        <%= cashReceiving.balanceAfterPayment %>
+                                    </td>
+                                    <td>
+                                        <a href="/editCashReceiving/<%= cashReceiving._id %>">edit</a>
+                                        <a href="/deleteCashReceiving/<%= cashReceiving._id %>">remove</a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <%- include('layout/footer') %>

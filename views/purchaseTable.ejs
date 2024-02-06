@@ -1,0 +1,78 @@
+<%- include('layout/header2') %>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="viewtable">
+                    <thead class="thead">
+                        <tr class="trow">
+                            <th class="theading">Purchase ID</th>
+                            <th class="theading">Company Name</th>
+                            <th class="theading">Date</th>
+                            <th class="theading">Product Name</th>
+                            <th class="theading">Quantity</th>
+                            <th class="theading">Unit Price</th>
+                            <th class="theading">Total Amount</th>
+                            <th class="theading">VAT</th>
+                            <th class="theading">Total With VAT</th>
+                            <th class="theading">Project Name</th>
+                            <th class="theading">Employee Name</th>
+                            <th class="theading">Fuel Expense Amount</th>
+                            <th class="theading">Fuel Expense VAT</th>
+                            <th class="theading">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% let index=1; %>
+                            <% for (const purchase of purchases) { %>
+                                <tr>
+                                    <td>
+                                        <%= purchase.purchaseId %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.companyName %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.date %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.productName %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.quantity %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.unitPrice %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.totalAmount %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.vat %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.totalWithVat %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.projectName %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.employeeName %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.fuelExpense.amount %>
+                                    </td>
+                                    <td>
+                                        <%= purchase.fuelExpense.vat %>
+                                    </td>
+                                    <td>
+                                        <a href="/editPurchase/<%= purchase._id %>">edit</a>
+                                        <a href="/deletePurchase/<%= purchase._id %>">remove</a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <%- include('layout/footer') %>

@@ -1,0 +1,35 @@
+<%- include('layout/header') %>
+<div class="container">
+    <section id="AFS">
+        <form action="/add-info" id="employee_form" method="post">
+            <div class="card">
+                <label for="ename">Name</label>
+                <input type="text" name="ename" class="inp" required>
+            </div>
+            <div class="card">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" name="phoneNumber" class="inp" required>
+            </div>
+            <div class="card">
+                <label for="dateOfJoining">Date of Joining</label>
+                <input type="date" name="dateOfJoining" class="inp" required>
+            </div>
+            <div class="card">
+                <label for="dateOfTermination">Date of Termination</label>
+                <input type="date" name="dateOfTermination" class="inp">
+            </div>
+            <div class="card">
+                <label for="designation">Designation</label>
+                <input type="text" name="designation" class="inp" required>
+            </div>
+            <div class="card">
+                <label for="salary">Salary</label>
+                <input type="number" name="salary" class="inp" required>
+            </div>
+            <div class="button2 card">
+                <input type="submit" name="submit" class="inp" value="Submit">
+            </div>
+        </form>
+    </section>
+</div>
+<%- include('layout/footer') %>

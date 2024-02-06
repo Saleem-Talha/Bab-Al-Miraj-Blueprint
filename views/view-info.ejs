@@ -1,0 +1,36 @@
+<%- include('layout/header') %>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="viewtable">
+                <thead class="thead">
+                    <tr class="trow">
+                        <th class="theading">Name</th>
+                        <th class="theading">Name</th>
+                        <th class="theading">Image</th>
+                        <th class="theading">Email</th>
+                        <th class="theading">Phone</th>
+                        <th class="theading">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% let index = 1; %>
+                    <% for (const user of users) { %>
+                        <tr>
+                            <td><%= index++ %></td>
+                            <td><%= user.name %></td>
+                            <td><img src="/<%= user.image %>" alt="User Image" style="max-width: 100px; max-height: 100px;"></td>
+                            <td><%= user.email %></td>
+                            <td><%= user.phone %></td>
+                            <td>
+                                <a href="/edit/<%= user._id %>">edit</a>
+                                <a href="/delete/<%= user._id %>">remove</a>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<%- include('layout/footer')%>

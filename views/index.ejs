@@ -1,0 +1,19 @@
+<%- include('layout/header') %>
+<div class="container">
+    <section id="AFS">
+        <form action="/Login" id="add_form" method="post">
+        <div class="card">
+            <label for="uname">Username</label>
+            <input type="text" name="uname" class="inp">
+            </div>
+            <div class="card">
+            <label for="password">Password</label>
+            <input type="text" name="password" class="inp">
+            </div>
+            <div class="button1 card" >
+            <input type="submit" name="submit" class="inp" value="Login">
+            </div>
+        </form>
+    </section>
+</div>
+<%- include('layout/footer')%>

@@ -1,0 +1,28 @@
+<%- include('layout/header') %>
+    <div class="container">
+        <section id="addPurchaseForm">
+            <form action="/purchases/add" method="post">
+                <div class="card">
+                    <label for="purchaseId">Purchase ID</label>
+                    <input type="text" name="purchaseId" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" name="companyName" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="date">Date</label>
+                    <input type="date" name="date" class="inp" required>
+                </div>
+                <div class="card">
+                    <label for="productName">Product Name</label>
+                    <input type="text" name="productName" class="inp" required>
+                </div>
+                <!-- Add other input fields as needed -->
+                <div class="button2 card">
+                    <input type="submit" name="submit" class="inp" value="Add Purchase">
+                </div>
+            </form>
+        </section>
+    </div>
+    <%- include('layout/footer') %>
